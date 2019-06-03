@@ -1,0 +1,12 @@
+<resources>
+    <string name="app_name">Mr. Robot</string>
+    <string name="intro1_title">INTELIGÊNCIA</string>
+    <string name="intro2_title">INTERAÇÃO</string>
+    <string name="intro3_title">MACHINE LEARNING</string>
+    <string name="intro4_title">O seu robô</string>
+    <string name="intro1_text">A inteligência de um robô\n A sua facilidade na pesquisa</string>
+    <string name="intro2_text">Fácil comunicação e entendimento sobre suas perguntas</string>
+    <string name="intro3_text">Você ensina a máquina\n Ela te beneficia\n Nós os agradecemos!</string>
+    <string name="title_activity_chat">ChatActivity</string>
+    <string name="hint_chat">Escreva sua mensagem...</string>
+</resources>
