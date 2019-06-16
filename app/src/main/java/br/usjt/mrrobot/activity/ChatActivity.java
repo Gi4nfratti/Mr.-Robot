@@ -77,6 +77,7 @@ public class ChatActivity extends AppCompatActivity {
                     mensagem = new Mensagem(finalUser.getNome(), input);
                     mensagens.add(mensagem);
                     txtEditText.setText("");
+                    recyclerMensagens.smoothScrollToPosition(recyclerMensagens.getAdapter().getItemCount()+1);
                     adapter.notifyDataSetChanged();
                     getResponse(input);
                 }else{

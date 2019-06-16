@@ -18,6 +18,7 @@ import br.usjt.mrrobot.model.Mensagem;
 public class MensagensAdapter extends RecyclerView.Adapter<MensagensAdapter.MyViewHolder> {
     private List<Mensagem> mensagens;
     private Context context;
+    private MensagensAdapter adapter;
 
     public MensagensAdapter(List<Mensagem> lista, Context c) {
         this.mensagens = lista;
@@ -39,6 +40,7 @@ public class MensagensAdapter extends RecyclerView.Adapter<MensagensAdapter.MyVi
 
     @Override
     public void onBindViewHolder(@NonNull MyViewHolder myViewHolder, int position) {
+        adapter = new MensagensAdapter(mensagens, context);
         Mensagem item = mensagens.get(position);
             myViewHolder.chatNome.setText(item.username);
         if(item.username.equals("Mr. Robot")){
@@ -63,10 +65,12 @@ public class MensagensAdapter extends RecyclerView.Adapter<MensagensAdapter.MyVi
         private CardView cardViewChat;
         private TextView chatNome;
         private TextView chatTextMensagem;
+        private RecyclerView recycler;
 
         public MyViewHolder(@NonNull View itemView) {
             super(itemView);
             cardViewChat = itemView.findViewById(R.id.chatCardView);
+            recycler = itemView.findViewById(R.id.recyclerMensagens);
             chatNome = itemView.findViewById(R.id.chatNome);
             chatTextMensagem = itemView.findViewById(R.id.chatTextMessage);
         }
