@@ -88,6 +88,11 @@ public class ChatActivity extends AppCompatActivity {
 
     }
 
+    public void relatorioButton(View view){
+        Intent i = new Intent(ChatActivity.this, RelatorioActivity.class );
+        startActivity(i);
+    }
+
     public void exitButton(View view) {
         new AlertDialog.Builder(this)
                 .setMessage("Deseja voltar a página inicial?")
@@ -157,11 +162,6 @@ public class ChatActivity extends AppCompatActivity {
                         Toast.makeText(context, "Erro de conexão", Toast.LENGTH_LONG).show();
                     }
                 });
-    }
-
-    public void relatorioButton(View view){
-        Intent i = new Intent(ChatActivity.this, RelatorioActivity.class );
-        startActivity(i);
     }
 
 }
