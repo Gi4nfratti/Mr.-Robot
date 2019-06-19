@@ -8,18 +8,18 @@
     android:orientation="vertical">
 
     <TextView
-        android:id="@+id/qtd_interacoes2"
+        android:id="@+id/terceiraInteracao"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="24dp"
         android:layout_marginTop="16dp"
         android:fontFamily="sans-serif-smallcaps"
-        android:text="Terceira interação:"
+        android:text="Terceira interação:                    0"
         android:textColor="@color/colorPrimary"
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/data_hora_atend" />
+        app:layout_constraintTop_toBottomOf="@+id/segundaInteracao" />
 
     <android.support.design.widget.AppBarLayout
         android:id="@+id/appBarLayout"
@@ -41,64 +41,120 @@
     </android.support.design.widget.AppBarLayout>
 
     <TextView
-        android:id="@+id/qtd_atend"
+        android:id="@+id/relatorioTitulo"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="24dp"
-        android:layout_marginTop="200dp"
+        android:layout_marginTop="50dp"
         android:layout_marginBottom="17dp"
         android:fontFamily="sans-serif-smallcaps"
         android:gravity="center"
-        android:text="Perguntas respondidas"
+        android:text="Relatório de soluções:"
         android:textColor="@color/colorPrimary"
         android:textStyle="bold"
-        app:layout_constraintBottom_toTopOf="@+id/duracao_interacao_atend"
+        app:layout_constraintBottom_toTopOf="@+id/primeiraInteracao"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/appBarLayout" />
 
     <TextView
-        android:id="@+id/data_hora_atend"
+        android:id="@+id/segundaInteracao"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="24dp"
         android:layout_marginTop="16dp"
         android:fontFamily="sans-serif-smallcaps"
-        android:text="Segunda interação:"
+        android:text="Segunda interação:                    0"
         android:textColor="@color/colorPrimary"
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/duracao_interacao_atend" />
+        app:layout_constraintTop_toBottomOf="@+id/primeiraInteracao" />
 
     <TextView
-        android:id="@+id/duracao_interacao_atend"
+        android:id="@+id/primeiraInteracao"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="24dp"
-        android:layout_marginTop="16dp"
+        android:layout_marginTop="30dp"
         android:fontFamily="sans-serif-smallcaps"
-        android:text="Primeira interação:"
+        android:text="Primeira interação:                    1"
         android:textColor="@color/colorPrimary"
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/qtd_atend" />
+        app:layout_constraintTop_toBottomOf="@+id/relatorioTitulo" />
 
     <TextView
-        android:id="@+id/qtd_interacoes"
+        android:id="@+id/naoRespondidas"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="24dp"
         android:layout_marginTop="16dp"
         android:fontFamily="sans-serif-smallcaps"
-        android:text="Quantidade de não respondidas:"
+        android:text="Não respondidas:                        1"
         android:textColor="@color/colorPrimary"
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/qtd_interacoes2" />
+        app:layout_constraintTop_toBottomOf="@+id/terceiraInteracao" />
+    <TextView
+    android:id="@+id/qtd_mensagens"
+    android:layout_width="0dp"
+    android:layout_height="wrap_content"
+    android:layout_marginStart="24dp"
+    android:layout_marginTop="16dp"
+    android:fontFamily="sans-serif-smallcaps"
+    android:text="Total de mensagens trocadas:   8"
+    android:textColor="@color/colorPrimary"
+    android:textStyle="bold"
+    app:layout_constraintEnd_toEndOf="parent"
+    app:layout_constraintHorizontal_bias="0.0"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintTop_toBottomOf="@+id/naoRespondidas" />
+
+    <TextView
+        android:id="@+id/periodo1"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="40dp"
+        android:fontFamily="sans-serif-smallcaps"
+        android:text="Período:"
+        android:textColor="@color/colorPrimary"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/qtd_mensagens" />
+
+    <TextView
+        android:id="@+id/periodo2"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="32dp"
+        android:fontFamily="sans-serif-smallcaps"
+        android:text="De:  17/06/2019"
+        android:textColor="@color/colorPrimary"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/periodo1" />
+
+    <TextView
+        android:id="@+id/periodo3"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="50dp"
+        android:fontFamily="sans-serif-smallcaps"
+        android:text="Até: 17/06/2019"
+        android:textColor="@color/colorPrimary"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/periodo2" />
 
     <Button
         android:id="@+id/relatorioSairButton"
@@ -114,7 +170,42 @@
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/qtd_interacoes"
+        app:layout_constraintTop_toBottomOf="@+id/periodo2"
         tools:ignore="OnClick" />
+
+    <android.support.design.widget.FloatingActionButton
+        android:id="@+id/datePicker1"
+        android:layout_width="56dp"
+        android:layout_height="57dp"
+        android:layout_gravity="bottom|end"
+        android:layout_margin="@dimen/fab_margin"
+        android:layout_marginStart="8dp"
+        android:backgroundTint="@color/design_default_color_primary"
+        android:gravity="center"
+        android:onClick="datepicker1"
+        android:textColor="@color/colorPrimary"
+        android:textStyle="bold"
+        app:layout_constraintStart_toEndOf="@+id/periodo2"
+        app:layout_constraintTop_toBottomOf="@+id/periodo1"
+        app:srcCompat="@drawable/ic_date_range_black_30dp"
+        tools:ignore="MissingConstraints" />
+
+    <android.support.design.widget.FloatingActionButton
+        android:id="@+id/datePicker2"
+        android:layout_width="56dp"
+        android:layout_height="57dp"
+        android:layout_gravity="bottom|end"
+        android:layout_margin="@dimen/fab_margin"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:backgroundTint="@color/design_default_color_primary"
+        android:gravity="center"
+        android:onClick="datepicker2"
+        android:textColor="@color/colorPrimary"
+        android:textStyle="bold"
+        app:layout_constraintStart_toEndOf="@+id/periodo3"
+        app:layout_constraintTop_toBottomOf="@+id/datePicker1"
+        app:srcCompat="@drawable/ic_date_range_black_30dp"
+        tools:ignore="MissingConstraints" />
 
 </android.support.constraint.ConstraintLayout>
